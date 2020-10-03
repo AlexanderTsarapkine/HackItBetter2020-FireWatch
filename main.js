@@ -1,7 +1,4 @@
 //APi calling
-const express = require("express");
-const fetch = require("node-fetch");
-const port = process.env.PORT;
 
 const geomappingURL = 'https://maps.googleapis.com/maps/api/geocode/json?address=';
 const geomappingKey = 'AIzaSyBxQ-ePRQRpr-82ztriavj7fWW6DO0rP10';
@@ -9,21 +6,23 @@ const envKey = '36ad0ea6934442c0b86ec7ab1bdaae8f';
 const fireURL = 'https://api.breezometer.com/fires/v1/current-conditions?lat=';
 const airURL =  'https://api.breezometer.com/air-quality/v2/current-conditions?lat='
 
-let postalcode = 'K2T1J3';
+let postalcode = '';
 
-const app = express();
-
-  fetch(geomappingURL+postalcode+"&key="+geomappingKey)
-  .then((res) => res.json())
-  .then((data) => {
-    if(!data){
-        console.log('ApiError');
+function submit(){
+    let postalcode = document.getElementById("PostalCode").value;
+    if(postalcode){
+        fetch(geomappingURL+postalcode+"&key="+geomappingKey)
+        .then((res) => res.json())
+        .then((data) => {
+            if(!data){
+                console.log('ApiError');
+            }
+            else{
+                fullAddressDisplay(data);
+            }
+        });
     }
-    else{
-        fullAddressDisplay(data);
-    }
-  });
-
+}
 
 function fullAddressDisplay(data){
     const main = data.results;
