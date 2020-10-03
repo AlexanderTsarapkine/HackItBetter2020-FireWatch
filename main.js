@@ -8,7 +8,6 @@ const airURL =  'https://api.breezometer.com/air-quality/v2/current-conditions?l
 
 let postalcode = '';
 
-let areaInfo = '';
 let airInfo = '';
 let fireInfo = '';
 
@@ -39,8 +38,6 @@ function fullAddressDisplay(data){
             for (key in element){
                 if(key === 'formatted_address'){
                     console.log(element[key]);               
-                    areaInfo = "You are in: "+element[key];
-                    document.getElementById("results").innerHTML = areaInfo + fireInfo + airInfo;
 
                 } 
                 if(key === 'geometry'){
@@ -67,13 +64,13 @@ function fireRisk(lat,lng){
           const mainData = data.data;
           if(!mainData.fires[0]){
               console.log("You're in a low fire risk area");
-              fireInfo = " in a low fire risk area with ";
-              document.getElementById("results").innerHTML = areaInfo + fireInfo + airInfo;
+              fireInfo = "You are in a low fire risk area with ";
+              document.getElementById("results").innerHTML = fireInfo + airInfo;
           }
           else{
               console.log("You're in a high fire risk area");
-              fireInfo = " in a high fire risk area with ";
-              document.getElementById("results").innerHTML = areaInfo + fireInfo + airInfo;
+              fireInfo = "You are in a high fire risk area with ";
+              document.getElementById("results").innerHTML = fireInfo + airInfo;
           }
       }
     });
@@ -90,7 +87,7 @@ function airRisk(lat,lng){
           const mainData = data.data.indexes.baqi;
             console.log(mainData.category+": "+mainData.aqi_display+"/100");
             airInfo = mainData.category+": "+mainData.aqi_display+"/100";
-            document.getElementById("results").innerHTML = areaInfo + fireInfo + airInfo;
+            document.getElementById("results").innerHTML = fireInfo + airInfo;
       }
     });
 }
