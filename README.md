@@ -1,5 +1,7 @@
 # HackItBetter2020-FireWatch
 
+to check node version: node -v
+
 npm i node
 npm i node-fetch --save
 npm i express
