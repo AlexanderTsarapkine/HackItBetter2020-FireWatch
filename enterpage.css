@@ -19,7 +19,7 @@ p {
     font-size: 120%;
     width: 500px;
     margin-left: 20%;
-    margin-top: 10%;
+    margin-top: 15%;
     text-align: center;
     margin-right:5%;
 }
@@ -63,11 +63,6 @@ p {
 
   div {
       display: flex;
-  }
-
-  #Location, #firerisk, #airquality{
-      margin-top: 0;
-      margin-left: 50%;
   }
 
 @font-face {
