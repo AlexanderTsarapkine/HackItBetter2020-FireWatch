@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     padding: 0;
@@ -7,13 +8,16 @@ body {
     font-family: 'Open Sans';
 }
 
+img {
+    width: 10%;
+}
 
 p {
     color: white;
     font-size: 120%;
     width: 500px;
     margin-left: 20%;
-    margin-top: 15%;
+    margin-top: 10%;
     text-align: center;
     margin-right:5%;
 }
@@ -26,7 +30,7 @@ p {
     width:20rem;
     height: 5%;
     margin-left: 10%;
-    margin-top: 20%;
+    margin-top: 16%;
     font-family: 'Open Sans';
 }
 
@@ -37,7 +41,7 @@ p {
     border-radius: 4px;
     box-sizing: border-box;
     height: 5%;
-    margin-top: 20%;
+    margin-top: 16%;
     margin-left: 0.5rem;
     font-family: 'Open Sans';
 
@@ -52,7 +56,7 @@ p {
     width:0;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5%;
+    margin-top: 0;
   }
 
   div {
