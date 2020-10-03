@@ -61,7 +61,7 @@ img {
     margin-top: 0;
   }
 
-  div {
+  .enteringSection {
       display: flex;
   }
 
