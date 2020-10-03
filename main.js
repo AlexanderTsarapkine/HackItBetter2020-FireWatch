@@ -33,7 +33,9 @@ function fullAddressDisplay(data){
         for (let element of main) {
             for (key in element){
                 if(key === 'formatted_address'){
-                    console.log(element[key]);
+                    console.log(element[key]);               
+                    document.getElementById("Location").innerHTML = "Location: "+element[key];
+
                 } 
                 if(key === 'geometry'){
                     const geometry = element[key];
@@ -59,9 +61,11 @@ function fireRisk(lat,lng){
           const mainData = data.data;
           if(!mainData.fires[0]){
               console.log("You're in a low fire risk area");
+              document.getElementById("firerisk").innerHTML = "You're in a low fire risk area";
           }
           else{
               console.log("You're in a high fire risk area");
+              document.getElementById("firerisk").innerHTML = "You're in a high fire risk area";
           }
       }
     });
@@ -77,6 +81,7 @@ function airRisk(lat,lng){
       else{
           const mainData = data.data.indexes.baqi;
             console.log(mainData.category+": "+mainData.aqi_display+"/100");
+            document.getElementById("airquality").innerHTML = mainData.category+": "+mainData.aqi_display+"/100";
       }
     });
 }

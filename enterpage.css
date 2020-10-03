@@ -65,6 +65,11 @@ p {
       display: flex;
   }
 
+  #Location, #firerisk, #airquality{
+      margin-top: 0;
+      margin-left: 50%;
+  }
+
 @font-face {
     font-family: 'Open Sans';
     font-style: normal;
