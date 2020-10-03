@@ -5,14 +5,15 @@ const port = process.env.PORT;
 
 const geomappingURL = 'https://maps.googleapis.com/maps/api/geocode/json?address=';
 const geomappingKey = 'AIzaSyBxQ-ePRQRpr-82ztriavj7fWW6DO0rP10';
-let addressNumber = 79;
-let addressStreet = 'Cambior';
-let streetType = 'cres';
-let city = 'Ottawa';
+const envKey = '36ad0ea6934442c0b86ec7ab1bdaae8f';
+const fireURL = 'https://api.breezometer.com/fires/v1/current-conditions?lat=';
+const airAPI =  'https://api.breezometer.com/air-quality/v2/current-conditions?lat='
+
+let postalcode = '90201';
 
 const app = express();
 
-  fetch(geomappingURL+addressNumber+"+"+addressStreet+"+"+streetType+",+"+city+"&key="+geomappingKey)
+  fetch(geomappingURL+postalcode+"&key="+geomappingKey)
   .then((res) => res.json())
   .then((data) => {
     if(!data){
@@ -37,9 +38,31 @@ function fullAddressDisplay(data){
                 } 
                 if(key === 'geometry'){
                     const geometry = element[key];
-                    console.log(geometry.location);
+                    const location = (geometry.location);
+                    const latitude =location.lat;
+                    const longitude = location.lng;
+                    fireRisk(latitude,longitude);
                 }
             }
         }
     }
+}
+
+function fireRisk(lat,lng){
+    fetch(fireURL+lat+"&lon="+lng+"&key="+envKey)
+    .then((res) => res.json())
+    .then((data) => {
+      if(!data){
+          console.log('ApiError');
+      }
+      else{
+          const mainData = data.data;
+          if(!mainData.fires[0]){
+              console.log("You're in a low fire risk area");
+          }
+          else{
+              console.log("You're in a high fire risk area");
+          }
+      }
+    });
 }
