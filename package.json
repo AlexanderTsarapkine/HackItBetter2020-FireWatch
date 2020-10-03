@@ -1,0 +1,28 @@
+{
+  "name": "HackItBetter2020-FireWatch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "node": "^14.13.0",
+    "node-fetch": "^2.6.1",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexanderTsarapkine/HackItBetter2020-FireWatch.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexanderTsarapkine/HackItBetter2020-FireWatch/issues"
+  },
+  "homepage": "https://github.com/AlexanderTsarapkine/HackItBetter2020-FireWatch#readme"
+}
