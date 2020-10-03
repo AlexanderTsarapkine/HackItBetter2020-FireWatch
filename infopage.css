@@ -4,10 +4,7 @@ body{
     padding: 0;
     background-size: cover;
     background-image: url("forest2.jpg");
-    background-position: bottom left;
     background-repeat: no-repeat;
-    height: 1000px;
-    width: 100%;
 }
 
 img {
