@@ -7,22 +7,14 @@ body {
     font-family: 'Open Sans';
 }
 
-h1 {
+a {
     color: white;
-    border-style: solid;
     padding: 1%;
     display: inline-block;
     position: absolute;
-    top: 43%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 6rem;
-    border-width:0.7rem
-}
-
-a{
-    text-decoration:none;
-    color: inherit;
 }
 
 @font-face {
