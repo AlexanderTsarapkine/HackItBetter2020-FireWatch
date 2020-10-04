@@ -60,6 +60,15 @@ a{
     font-family: 'Open sans';
 }
 
+#buttons {
+    float: right;
+    width: 8%;
+}
+
+#header {
+    display: inline;
+}
+
 h3 {
     color: white;
     border-style: solid;
