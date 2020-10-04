@@ -4,6 +4,7 @@ body {
     padding: 0;
     background-image: url("background.jpg");
     background-repeat: no-repeat;
+    background-size: cover;
     font-family: 'Open Sans';
 }
 
@@ -98,8 +99,8 @@ m {
     font-size: 12px;
     padding-left: 12%;
     padding-right: 12%;
-    padding-top: 20%;
-    padding-bottom: 5%;
+    padding-top: 30%;
+    padding-bottom: 3%;
     
 }
 
