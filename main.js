@@ -68,12 +68,12 @@ function fireRisk(lat,lng,locale){
           if(!mainData.fires[0]){
               console.log(" is a low fire risk area");
               fireInfo = " is a low fire risk area with ";
-              document.getElementById("results").innerHTML = locale+fireInfo + airInfo;
+              document.getElementById("results").innerHTML = locale+fireInfo + airInfo + ". Scroll down to see what you should do.";
           }
           else{
               console.log(" is a high fire risk area");
               fireInfo = " is a high fire risk area with ";
-              document.getElementById("results").innerHTML = locale+fireInfo + airInfo;
+              document.getElementById("results").innerHTML = locale+fireInfo + airInfo + ". Scroll down to see what you should do.";
           }
       }
     });
@@ -90,7 +90,7 @@ function airRisk(lat,lng){
           const mainData = data.data.indexes.baqi;
             console.log(mainData.category+": "+mainData.aqi_display+"/100");
             airInfo = mainData.category+": "+mainData.aqi_display+"/100";
-            document.getElementById("results").innerHTML = locale+ fireInfo + airInfo;
+            document.getElementById("results").innerHTML = locale+ fireInfo + airInfo + ". Scroll down to see what you should do.";
       }
     });
 }
