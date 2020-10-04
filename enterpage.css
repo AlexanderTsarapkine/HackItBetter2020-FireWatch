@@ -18,7 +18,7 @@ img {
     color: white;
     font-size: 170%;
     width: 500px;
-    margin-left: 20%;
+    margin-left: 25%;
     margin-top: 15%;
     text-align: center;
     margin-right:5%;
@@ -37,7 +37,7 @@ img {
 }
 
 #SubmitButton {
-    margin-right: 20%;
+    margin-right: 3%;
     padding: 10px 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -48,6 +48,15 @@ img {
     font-family: 'Open Sans';
 
 
+}
+
+#buttons {
+    float: right;
+    width: 8%;
+}
+
+#header {
+    display: inline;
 }
 
 
