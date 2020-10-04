@@ -13,7 +13,7 @@ img {
     margin-top: 1%;
 }
 
-p {
+#text {
     opacity: 70%;
     font-family: 'Open Sans';
     color: white;
@@ -26,6 +26,20 @@ p {
     text-align: center;
 }
 
+#text2{
+    opacity: 70%;
+    font-family: 'Open Sans';
+    color: white;
+    font-size: 150%;
+    top: 60px;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    text-align: center;
+
+}
+
 h2 {
     color: white;
     opacity: 90%;
@@ -33,11 +47,11 @@ h2 {
     padding: 1%;
     display: inline-block;
     position: absolute;
-    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 3rem;
     border-width:0.2rem;
+    margin-top: 5%;
 }
 
 a{
