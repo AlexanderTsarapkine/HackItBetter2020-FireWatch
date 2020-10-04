@@ -7,14 +7,19 @@ body {
     font-family: 'Open Sans';
 }
 
+img {
+    width: 60%;
+}
+
 a {
     color: white;
     padding: 1%;
     display: inline-block;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 58%;
     transform: translate(-50%, -50%);
+    
 }
 
 @font-face {
