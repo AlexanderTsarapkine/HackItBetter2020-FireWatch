@@ -11,6 +11,8 @@ let postalcode = '';
 let airInfo = '';
 let fireInfo = '';
 
+let locale ='';
+
 
 function submit(){
     let postalcode = document.getElementById("PostalCode").value;
@@ -37,23 +39,24 @@ function fullAddressDisplay(data){
         for (let element of main) {
             for (key in element){
                 if(key === 'formatted_address'){
-                    console.log(element[key]);               
-
+                    locale =(element[key]);  
+                    
                 } 
                 if(key === 'geometry'){
                     const geometry = element[key];
                     const location = (geometry.location);
                     const latitude =location.lat;
                     const longitude = location.lng;
-                    fireRisk(latitude,longitude);
-                    airRisk(latitude,longitude);
+                    
+                    fireRisk(latitude,longitude,locale);
+                    airRisk(latitude,longitude,locale);
                 }
             }
         }
     }
 }
 
-function fireRisk(lat,lng){
+function fireRisk(lat,lng,locale){
     fetch(fireURL+lat+"&lon="+lng+"&key="+envKey)
     .then((res) => res.json())
     .then((data) => {
@@ -63,14 +66,14 @@ function fireRisk(lat,lng){
       else{
           const mainData = data.data;
           if(!mainData.fires[0]){
-              console.log("You're in a low fire risk area");
-              fireInfo = "You are in a low fire risk area with ";
-              document.getElementById("results").innerHTML = fireInfo + airInfo;
+              console.log(" is a low fire risk area");
+              fireInfo = " is a low fire risk area with ";
+              document.getElementById("results").innerHTML = locale+fireInfo + airInfo;
           }
           else{
-              console.log("You're in a high fire risk area");
-              fireInfo = "You are in a high fire risk area with ";
-              document.getElementById("results").innerHTML = fireInfo + airInfo;
+              console.log(" is a high fire risk area");
+              fireInfo = " is a high fire risk area with ";
+              document.getElementById("results").innerHTML = locale+fireInfo + airInfo;
           }
       }
     });
@@ -87,7 +90,7 @@ function airRisk(lat,lng){
           const mainData = data.data.indexes.baqi;
             console.log(mainData.category+": "+mainData.aqi_display+"/100");
             airInfo = mainData.category+": "+mainData.aqi_display+"/100";
-            document.getElementById("results").innerHTML = fireInfo + airInfo;
+            document.getElementById("results").innerHTML = locale+ fireInfo + airInfo;
       }
     });
 }
