@@ -3,7 +3,7 @@
 //FREE/PUBLIC API KEYS and url's
 const geomappingURL = 'https://maps.googleapis.com/maps/api/geocode/json?address=';
 const geomappingKey = 'AIzaSyBxQ-ePRQRpr-82ztriavj7fWW6DO0rP10';
-const envKey = '36ad0ea6934442c0b86ec7ab1bdaae8f';
+const envKey = '76f4554dc5b446458ef9613bc064a741';
 const fireURL = 'https://api.breezometer.com/fires/v1/current-conditions?lat=';
 const airURL =  'https://api.breezometer.com/air-quality/v2/current-conditions?lat='
 
