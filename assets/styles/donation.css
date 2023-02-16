@@ -1,7 +1,7 @@
 body {
     size: 101%;
     padding: 0;
-    background-image: url("FIREfighter.jpg");
+    background-image: url("../images/FIREfighter.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Open Sans';

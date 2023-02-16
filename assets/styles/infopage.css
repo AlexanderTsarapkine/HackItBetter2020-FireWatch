@@ -3,7 +3,7 @@ body{
     margin: 0;
     padding: 0;
     background-size: cover;
-    background-image: url("forest2.jpg");
+    background-image: url("../images/forest2.jpg");
     background-repeat: no-repeat;
 }
 

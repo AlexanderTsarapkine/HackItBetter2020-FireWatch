@@ -1,26 +1,41 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url("forest2.jpg");
+    background-image: url("../images/aboutus.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Open Sans';
 }
 
-img {
-    width: 60%;
+#logo {
+    width: 12%;
+    margin-left: 1%;
+    margin-top: 1%;
 }
 
-a {
-    color: white;
-    padding: 1%;
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    left: 58%;
-    transform: translate(-50%, -50%);
-    
+#github {
+    display: block;
+    margin: 0 auto;
+    width: 25%;
+    padding-top: 225px;
 }
+
+p {
+    color: white;
+    font-size: 175%;
+    text-align: center;
+    position: relative;
+    bottom: 100px;
+}
+
+
+  .bodyoftext {
+      opacity: 85%;
+      padding-left: 20%;
+      padding-right: 20%;
+      padding-top: 20%;
+  }
+
 
 @font-face {
     font-family: 'Open Sans';
